@@ -22,11 +22,7 @@ public class RegistrationPage {
             addressInput = $("#currentAddress"),
             selectState = $("#state"),
             selectCity = $("#city"),
-            submitButton = $("#submit"),
-            redGenderWraper = $("#genterWrapper .custom-control-label");
-
-
-
+            submitButton = $("#submit");
 
     CalendarComponent calendarComponent = new CalendarComponent();
     TestResultComponent testResultComponent = new TestResultComponent();
@@ -34,8 +30,6 @@ public class RegistrationPage {
     public RegistrationPage openPage() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
         return this;
     }
 
